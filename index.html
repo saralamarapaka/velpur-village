@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NIZAMABAD DISTRICT - VELPUR MANDAL</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#eef3f8;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#0b5394;
+padding:15px 25px;
+color:#fff;
+box-shadow:0 2px 8px rgba(0,0,0,.25);
+}
+
+.logo{
+width:70px;
+height:70px;
+object-fit:contain;
+}
+
+.title{
+text-align:center;
+flex:1;
+}
+
+.title h1{
+font-size:30px;
+margin-bottom:5px;
+}
+
+.title h2{
+font-size:18px;
+font-weight:normal;
+}
+
+.search-box{
+width:95%;
+max-width:800px;
+margin:20px auto;
+}
+
+.search-box input{
+width:100%;
+padding:14px;
+font-size:17px;
+border:1px solid #ccc;
+border-radius:10px;
+outline:none;
+}
+
+.search-box input:focus{
+border-color:#0b5394;
+}
+
+.container{
+width:95%;
+max-width:1100px;
+margin:auto;
+padding-bottom:40px;
+}
+
+.place{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#fff;
+padding:15px;
+margin-bottom:15px;
+border-radius:10px;
+box-shadow:0 2px 6px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.place:hover{
+transform:translateY(-3px);
+}
+
+.left{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.icon{
+width:55px;
+height:55px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+background:#dbeeff;
+font-size:28px;
+}
+
+.info h3{
+color:#0b5394;
+margin-bottom:5px;
+}
+
+.info p{
+color:#666;
+}
+
+.open-btn{
+background:#0b5394;
+color:#fff;
+padding:10px 18px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.open-btn:hover{
+background:#1565c0;
+}
+
+footer{
+background:#0b5394;
+color:#fff;
+text-align:center;
+padding:15px;
+margin-top:30px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:12px;
+}
+
+.logo{
+width:60px;
+height:60px;
+}
+
+.place{
+flex-direction:column;
+align-items:flex-start;
+gap:15px;
+}
+
+.open-btn{
+width:100%;
+text-align:center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="ou-logo.png" alt="OU Logo" class="logo">
+
+<div class="title">
+<h1>NIZAMABAD DISTRICT</h1>
+<h2>VELPUR MANDAL</h2>
+</div>
+
+<img src="otbi-logo.png" alt="OTBI Logo" class="logo">
+
+</header>
+
+<div class="search-box">
+<input
+type="text"
+id="search"
+placeholder="Search Place..."
+onkeyup="searchPlaces()">
+</div>
+
+<div class="container" id="places">
+<!-- 1 -->
+<div class="place">
+  <div class="left">
+    <div class="icon">🏫</div>
+    <div class="info">
+      <h3>Niz-vel-school</h3>
+      <p>School</p>
+    </div>
+  </div>
+  <a class="open-btn" href="https://www.google.com/maps?q=18.7643,78.3973" target="_blank">Open Map</a>
+</div>
+
+<!-- 2 -->
+<div class="place">
+  <div class="left">
+    <div class="icon">🏢</div>
+    <div class="info">
+      <h3>Niz-vel-mee sava</h3>
+      <p>Mee Seva</p>
+    </div>
+  </div>
+  <a class="open-btn" href="https://www.google.com/maps?q=18.7629,78.3981" target="_blank">Open Map</a>
+</div>
+
+<!-- 3 -->
+<div class="place">
+  <div class="left">
+    <div class="icon">🏦</div>
+    <div class="info">
+      <h3>Niz-vel-bank</h3>
+      <p>Bank</p>
+    </div>
+  </div>
+  <a class="open-btn" href="https://www.google.com/maps?q=18.7629,78.3982" target="_blank">Open Map</a>
+</div>
+
+<!-- 4 -->
+<div class="place">
+  <div class="left">
+    <div class="icon">💊</div>
+    <div class="info">
+      <h3>Niz-vel-pharmacy</h3>
+      <p>Pharmacy</p>
+    </div>
+  </div>
+  <a class="open-btn" href="https://www.google.com/maps?q=18.7626,78.3980" target="_blank">Open Map</a>
+</div>
+
+<!-- 5 -->
+<div class="place">
+  <div class="left">
+    <div class="icon">⛪</div>
+    <div class="info">
+      <h3>Niz-vel-church</h3>
+      <p>Church</p>
+    </div>
+  </div>
+  <a class="open-btn" href="https://www.google.com/maps?q=18.7638,78.3985" target="_blank">Open Map</a>
+</div>
+
+<!-- 6 -->
+<div class="place">
+  <div class="left">
+    <div class="icon">🛕</div>
+    <div class="info">
+      <h3>Niz-vel-temple</h3>
+      <p>Temple</p>
+    </div>
+  </div>
+  <a class="open-btn" href="https://www.google.com/maps?q=18.7569,78.3935" target="_blank">Open Map</a>
+</div>
+
+<!-- 7 -->
+<div class="place">
+  <div class="left">
+    <div class="icon">🌊</div>
+    <div class="info">
+      <h3>Niz-vel-lake</h3>
+      <p>Lake</p>
+    </div>
+  </div>
+  <a class="open-btn" href="https://www.google.com/maps?q=18.7540,78.3921" target="_blank">Open Map</a>
+</div>
+
+<!-- 8 -->
+<div class="place">
+  <div class="left">
+    <div class="icon">🕌</div>
+    <div class="info">
+      <h3>Niz-vel-masjid</h3>
+      <p>Masjid</p>
+    </div>
+  </div>
+  <a class="open-btn" href="https://www.google.com/maps?q=18.7614,78.4011" target="_blank">Open Map</a>
+</div>
+
+<!-- 9 -->
+<div class="place">
+  <div class="left">
+    <div class="icon">🏛️</div>
+    <div class="info">
+      <h3>Niz-vel-function hall</h3>
+      <p>Function Hall</p>
+    </div>
+  </div>
+  <a class="open-btn" href="https://www.google.com/maps?q=18.7611,78.4010" target="_blank">Open Map</a>
+</div>
+
+<!-- 10 -->
+<div class="place">
+  <div class="left">
+    <div class="icon">📮</div>
+    <div class="info">
+      <h3>Niz-vel-post office</h3>
+      <p>Post Office</p>
+    </div>
+  </div>
+  <a class="open-btn" href="https://www.google.com/maps?q=18.7634,78.3983" target="_blank">Open Map</a>
+</div>
+<!-- 11 -->
+<div class="place">
+  <div class="left">
+    <div class="icon">💊</div>
+    <div class="info">
+      <h3>Niz-vel-medical store</h3>
+      <p>Medical Store</p>
+    </div>
+  </div>
+  <a class="open-btn" href="https://www.google.com/maps?q=18.7634,78.3968" target="_blank">Open Map</a>
+</div>
+
+<!-- 12 -->
+<div class="place">
+  <div class="left">
+    <div class="icon">🥐</div>
+    <div class="info">
+      <h3>Niz-vel-bakery</h3>
+      <p>Bakery</p>
+    </div>
+  </div>
+  <a class="open-btn" href="https://www.google.com/maps?q=18.7631,78.3970" target="_blank">Open Map</a>
+</div>
+
+<!-- 13 -->
+<div class="place">
+  <div class="left">
+    <div class="icon">🌳</div>
+    <div class="info">
+      <h3>Niz-vel-garden</h3>
+      <p>Garden</p>
+    </div>
+  </div>
+  <a class="open-btn" href="https://www.google.com/maps?q=18.7669,78.3949" target="_blank">Open Map</a>
+</div>
+
+<!-- 14 -->
+<div class="place">
+  <div class="left">
+    <div class="icon">⛽</div>
+    <div class="info">
+      <h3>Niz-vel-petrol pump</h3>
+      <p>Petrol Pump</p>
+    </div>
+  </div>
+  <a class="open-btn" href="https://www.google.com/maps?q=18.7663,78.3922" target="_blank">Open Map</a>
+</div>
+
+<!-- 15 -->
+<div class="place">
+  <div class="left">
+    <div class="icon">🏥</div>
+    <div class="info">
+      <h3>Niz-vel-hospital</h3>
+      <p>Hospital</p>
+    </div>
+  </div>
+  <a class="open-btn" href="https://www.google.com/maps?q=18.7638,78.3919" target="_blank">Open Map</a>
+</div>
+
+<!-- 16 -->
+<div class="place">
+  <div class="left">
+    <div class="icon">🏟️</div>
+    <div class="info">
+      <h3>Niz-vel-tennis stadium</h3>
+      <p>Stadium</p>
+    </div>
+  </div>
+  <a class="open-btn" href="https://www.google.com/maps?q=18.7605,78.3911" target="_blank">Open Map</a>
+</div>
+
+<!-- 17 -->
+<div class="place">
+  <div class="left">
+    <div class="icon">🍽️</div>
+    <div class="info">
+      <h3>Niz-vel-tiffin centre</h3>
+      <p>Tiffin Centre</p>
+    </div>
+  </div>
+  <a class="open-btn" href="https://www.google.com/maps?q=18.7627,78.3940" target="_blank">Open Map</a>
+</div>
+
+<!-- 18 -->
+<div class="place">
+  <div class="left">
+    <div class="icon">🛕</div>
+    <div class="info">
+      <h3>Niz-vel-temple.2</h3>
+      <p>Temple</p>
+    </div>
+  </div>
+  <a class="open-btn" href="https://www.google.com/maps?q=18.7615,78.3990" target="_blank">Open Map</a>
+</div>
+
+<!-- 19 -->
+<div class="place">
+  <div class="left">
+    <div class="icon">🚌</div>
+    <div class="info">
+      <h3>Niz-vel-bus stand</h3>
+      <p>Bus Stand</p>
+    </div>
+  </div>
+  <a class="open-btn" href="https://www.google.com/maps?q=18.7670,78.3925" target="_blank">Open Map</a>
+</div>
+
+</div>
+
+<footer>
+  <p>© 2026 Nizamabad District - Velpur Mandal</p>
+  <p>Developed using OU & OTBI Project Template</p>
+</footer>
+
+<script>
+function searchPlaces() {
+
+  let input = document.getElementById("search").value.toLowerCase();
+  let places = document.getElementsByClassName("place");
+
+  for (let i = 0; i < places.length; i++) {
+
+    let text = places[i].innerText.toLowerCase();
+
+    if (text.indexOf(input) > -1) {
+      places[i].style.display = "flex";
+    } else {
+      places[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>
